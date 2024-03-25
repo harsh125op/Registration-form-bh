@@ -7,8 +7,9 @@ const app = express();
 dotenv.config();
 
 const port = process.env.PORT || 5000;
-const username = "mahantiharsh";
-const password = "GYlrPYKFqVHxetJa";
+const username = process.env.MONGODB_USERNAME;
+const password = process.env.MONGODB_PASSWORD;
+
 
 
 mongoose.connect(`mongodb+srv://${username}:${password}@cluster0.h2pyg1f.mongodb.net/registrationFormDB`,{
